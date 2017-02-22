@@ -5,10 +5,10 @@
     padding-right: ceil(($gutter / 2));
     @include clearfix;
 
-    @include breakpoint(small) { width: 480px; }
-    @include breakpoint(medium) { width: 720px; }
-    @include breakpoint(large) { width: 940px; }
-    @include breakpoint(xlarge) { width: 1170px; }
+    @include breakpoint(small) { width: $small-width; }
+    @include breakpoint(medium) { width: $medium-width; }
+    @include breakpoint(large) { width: $large-width; }
+    @include breakpoint(xlarge) { width: $xlarge-width; }
 }
 
 @mixin make-row($gutter: $grid-gutter-width) {

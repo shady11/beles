@@ -5,6 +5,7 @@ Header
 -------------------------------- */
 
 header{
+  position: relative;
   height: 120px;
   padding: 35px 0;
   @include box-shadow(0 1px 5px transparentize($bx-light, 0.75));
@@ -57,7 +58,7 @@ main{
   }
 
   &-content{
-    padding: 36px 0;
+    padding: 24px 0;
     position: relative;
 
     &.f-posts{
@@ -72,7 +73,7 @@ main{
 
   &-title{
     position: relative;
-    margin: 48px 0 0;
+    margin: 24px 0 0;
     padding: 0 $grid-gutter-width/2;
     font-size: 24px;
     line-height: 1.5;
@@ -215,12 +216,13 @@ main{
 }
 
 //Latest Posts
-.l-post{
+.l-post,
+.r-post{
 
   &-thumb{
     position: relative;
     overflow: hidden;
-    height: 200px;
+    height: 160px;
   }
 
   &-image{
@@ -229,13 +231,11 @@ main{
 
   &-caption{
     padding: 16px 0;
-    //@include box-shadow(0 3px 10px rgba(0, 0, 0, 0.15));
   }
   &-title{
     height: 60px;
-    margin-bottom: 16px;
     font-family: $pt-sans-bold;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
   }
 
@@ -292,7 +292,13 @@ main{
   &-thumb{
     position: relative;
     overflow: hidden;
-    height: 280px;
+    height: 160px;
+  }
+
+  &-large{
+    .p-post-thumb{
+      height: 472px;
+    }
   }
 
   &-image{
@@ -300,14 +306,14 @@ main{
   }
 
   &-caption{
-    padding: 16px;
-    background: $white;
-    @include box-shadow(0 3px 10px rgba(0, 0, 0, 0.15));
+    padding: 16px 0;
+    //background: $white;
+    //@include box-shadow(0 3px 10px rgba(0, 0, 0, 0.15));
   }
   &-title{
-    height: 80px;
+    height: 60px;
     font-family: $pt-sans-bold;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
   }
 
@@ -513,7 +519,179 @@ main{
     }
     .b-post-title{
       height: 60px;
-      font-size: 18px;
+      font-size: 16px;
+    }
+  }
+}
+
+//Article
+.post{
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  @include border(1px solid transparentize($grey, 0.75), bottom);
+
+  &-figure{
+    position: relative;
+  }
+
+  &-thumb{
+    position: relative;
+    overflow: hidden;
+    height: 480px;
+
+    &::after{
+      @include pseudos();
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparentize($red, 0.85);
+    }
+  }
+
+  &-image{
+    @include abs-centered(height);
+  }
+
+  &-caption{
+    @include abs-positioned(0,0);
+    width: 1000px;
+    max-width: 100%;
+  }
+
+  &-title{
+    height: 40px;
+    margin-bottom: 16px;
+    font-family: $pt-sans-bold;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &-details{
+    margin-bottom: 8px;
+    svg{
+      @include abs-positioned();
+      fill: $grey;
+    }
+  }
+
+  &-author,
+  &-date,
+  &-views,
+  &-comments{
+    display: inline-block;
+    vertical-align: middle;
+    color: $grey;
+    font-size: 10px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+
+  &-views,
+  &-comments{
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &-author{
+    position: relative;
+    padding-right: 8px;
+
+    &::after{
+      @include pseudos();
+      @include square(4px);
+      @include border-radius(50%);
+      top: 6px;
+      right: -4px;
+      background: $grey;
+    }
+  }
+
+  &-views {
+    svg {
+      @include abs-positioned(1,1);
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &-comments {
+    svg {
+      @include abs-positioned(3,3);
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &-author-with-thumb{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+  &-author-thumb,
+  &-author-name{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-author-thumb{
+    @include border-radius(50%);
+    overflow: hidden;
+    margin-right: 8px;
+
+    img{
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &-author,
+  &-author-name{
+    font-family: $pt-sans-bold;
+    text-transform: uppercase;
+  }
+
+  &-author-name{
+    font-size: 12px;
+  }
+
+  &-with-thumb{
+    @include border(none);
+
+    .b-post-caption{
+      padding: 16px;
+      background: $white;
+      @include box-shadow(0 3px 10px transparentize($dark, 0.85));
+    }
+    .b-post-details{
+      position: absolute;
+      top: -36px;
+      margin-bottom: 0;
+
+      svg{
+        fill: $white;
+      }
+    }
+    .b-post-date,
+    .b-post-views,
+    .b-post-comments{
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      color: $white;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .b-post-author{
+      padding: 0;
+      &::after{
+        display: none;
+      }
+    }
+    .b-post-title{
+      height: 60px;
+      font-size: 16px;
     }
   }
 }
