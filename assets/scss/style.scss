@@ -64,6 +64,7 @@ main{
     &.f-posts{
       margin-bottom: 16px;
     }
+
   }
 
   &-title,
@@ -122,6 +123,15 @@ main{
       background: $red;
     }
   }
+}
+
+
+.cat-section {
+
+  &-title{
+    padding: 0;
+  }
+  
 }
 
 //Featured Posts
@@ -217,7 +227,8 @@ main{
 
 //Latest Posts
 .l-post,
-.r-post{
+.r-post,
+.cat-post{
 
   &-thumb{
     position: relative;
@@ -692,6 +703,74 @@ main{
     .b-post-title{
       height: 60px;
       font-size: 16px;
+    }
+  }
+}
+
+.cat-two-post{
+
+  &-thumb{
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+  }
+
+  &-image{
+    @include abs-centered(width);
+  }
+
+  &-caption{
+    padding: 16px 0;
+  }
+  &-title{
+    height: 60px;
+    font-family: $pt-sans-bold;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &-details{
+    margin-bottom: 16px;
+    svg{
+      @include abs-positioned();
+      fill: $grey;
+    }
+  }
+
+  &-date,
+  &-views,
+  &-comments{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    color: $grey;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &-views,
+  &-comments{
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &-date{
+    text-transform: uppercase;
+  }
+
+  &-views {
+    svg {
+      @include abs-positioned(1,1);
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &-comments {
+    svg {
+      @include abs-positioned(3,3);
+      width: 12px;
+      height: 12px;
     }
   }
 }
