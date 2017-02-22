@@ -528,7 +528,6 @@ main{
 .post{
   padding-bottom: 12px;
   margin-bottom: 12px;
-  @include border(1px solid transparentize($grey, 0.75), bottom);
 
   &-figure{
     position: relative;
@@ -545,7 +544,7 @@ main{
       left: 0;
       width: 100%;
       height: 100%;
-      background: transparentize($red, 0.85);
+      background: transparentize($post-thumb-overlay, 0.65);
     }
   }
 
@@ -554,35 +553,35 @@ main{
   }
 
   &-caption{
-    @include abs-positioned(0,0);
-    width: 1000px;
-    max-width: 100%;
+    @include abs-positioned(0,-1,-1,0);
+    width: 100%;
+    padding: 32px;
   }
 
   &-title{
-    height: 40px;
-    margin-bottom: 16px;
-    font-family: $pt-sans-bold;
-    font-size: 16px;
-    line-height: 20px;
+    color: $white;
+    font-family: $museo-700;
+    font-size: 24px;
+    letter-spacing: 0.75px;
   }
 
   &-details{
     margin-bottom: 8px;
     svg{
       @include abs-positioned();
-      fill: $grey;
+      fill: $white;
     }
   }
 
   &-author,
+  &-category,
   &-date,
   &-views,
   &-comments{
     display: inline-block;
     vertical-align: middle;
-    color: $grey;
-    font-size: 10px;
+    color: $white;
+    font-size: 12px;
     line-height: 18px;
     text-transform: uppercase;
     margin-right: 8px;
@@ -594,9 +593,11 @@ main{
     padding-left: 20px;
   }
 
-  &-author{
+  &-author,
+  &-category{
     position: relative;
     padding-right: 8px;
+    cursor: pointer;
 
     &::after{
       @include pseudos();
@@ -605,6 +606,17 @@ main{
       top: 6px;
       right: -4px;
       background: $grey;
+    }
+  }
+
+  &-category{
+    &:hover,
+    &:focus,
+    &:active{
+      color: transparentize($white, 0.5);
+    }
+    &::after{
+      background: $white;
     }
   }
 
