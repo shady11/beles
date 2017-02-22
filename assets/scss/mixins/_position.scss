@@ -18,10 +18,10 @@
 }
 @mixin abs-positioned($left: null, $top: null, $right: null, $bottom: null){
     position: absolute;
-    @if $left {left: $left+px;}
-    @if $top {top: $top+px;}
-    @if $right {right: $right+px;}
-    @if $bottom {bottom: $bottom+px;}
+    @if $left and $left >= 0 {left: $left+px;}
+    @if $top and $top >= 0 {top: $top+px;}
+    @if $right and $right >= 0 {right: $right+px;}
+    @if $bottom and $bottom >= 0 {bottom: $bottom+px;}
 }
 @mixin relative($z-index: 0, $left: null, $top: null, $right: null, $bottom: null){
     position: relative;
