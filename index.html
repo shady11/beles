@@ -51,7 +51,7 @@
                   <span>
                   Мыктылар
                   </span>
-                  <a class="section-title-link" href="#">бардыгы</a>
+                  <a class="section-title-link" href="/featured.html">бардыгы</a>
                </h1>
                <section class="section-content posts f-posts clearfix">
                   <a href="/post.html" class="f-post grid-4">
@@ -1036,47 +1036,47 @@
       <script src="assets/js/main.js"></script>
       <script>
          (function() {
-         var tiltSettings = [
-         {
-         movement: {
-         imgWrapper : {
-         translation : {x: 10, y: 10, z: 30},
-         rotation : {x: 0, y: -10, z: 0},
-         reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
-         },
-         lines : {
-         translation : {x: 10, y: 10, z: [0,70]},
-         rotation : {x: 0, y: 0, z: -2},
-         reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
-         },
-         caption : {
-         rotation : {x: 0, y: 0, z: 2},
-         reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
-         },
-         overlay : {
-         translation : {x: 10, y: -10, z: 0},
-         rotation : {x: 0, y: 0, z: 2},
-         reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
-         },
-         shine : {
-         translation : {x: 100, y: 100, z: 0},
-         reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
-         }
-         }
-         }
-         ];
-         function init() {
-         var idx = 0;
-         [].slice.call(document.querySelectorAll('a.f-post')).forEach(function(el, pos) {
-         idx = pos%3 === 0 ? idx+1 : idx;
-         new TiltFx(el, tiltSettings[idx-1]);
-         });
-         }
-         // Preload all images.
-         imagesLoaded(document.querySelector('main'), function() {
-         document.body.classList.remove('loading');
-         init();
-         });
+            var tiltSettings = [
+               {
+                  movement: {
+                     imgWrapper : {
+                        translation : {x: 10, y: 10, z: 30},
+                        rotation : {x: 0, y: -10, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                     },
+                     lines : {
+                        translation : {x: 10, y: 10, z: [0,70]},
+                        rotation : {x: 0, y: 0, z: -2},
+                        reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+                     },
+                     caption : {
+                        rotation : {x: 0, y: 0, z: 2},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                     },
+                     overlay : {
+                        translation : {x: 10, y: -10, z: 0},
+                        rotation : {x: 0, y: 0, z: 2},
+                        reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+                     },
+                     shine : {
+                        translation : {x: 100, y: 100, z: 0},
+                        reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                     }
+                  }
+               }
+            ];
+            function init() {
+               var idx = 0;
+               [].slice.call(document.querySelectorAll('a.f-post')).forEach(function(el, pos) {
+               idx = pos%3 === 0 ? idx+1 : idx;
+               new TiltFx(el, tiltSettings[idx-1]);
+               });
+            }
+            // Preload all images.
+            imagesLoaded(document.querySelector('main'), function() {
+            document.body.classList.remove('loading');
+            init();
+            });
          })();
       </script>
    </body>

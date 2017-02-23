@@ -337,7 +337,6 @@ main{
     //@include box-shadow(0 3px 10px rgba(0, 0, 0, 0.15));
   }
   &-title{
-    height: 60px;
     font-family: $pt-sans-bold;
     font-size: 16px;
     line-height: 20px;
@@ -846,9 +845,15 @@ main{
   right: 0;
   font-size: 14px;
 
-  li a{
-    font-family:$pt-sans; 
-    padding: 6px;
+  li{
+    a{
+      color: #009688;
+      padding: 6px;
+    }
+
+    a:hover, a:active, a:focus {
+      color: #d0072a;
+    }
   } 
 
   li:last-child a{
@@ -858,8 +863,6 @@ main{
   .nav{
     display: inline-block;
     border-radius: 50em;
-    border: 1px solid #eff1f3;
-    padding:0 10px;
   }
 
   &-label{
