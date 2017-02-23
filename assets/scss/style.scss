@@ -232,7 +232,9 @@ main{
 //Latest Posts
 .l-post,
 .r-post,
-.cat-post{
+.cat-post,
+.bloggers,
+.blog-post{
 
   &-thumb{
     position: relative;
@@ -555,10 +557,10 @@ main{
 //Article
 .post{
   padding-bottom: 12px;
-  margin-bottom: 12px;
 
   &-figure{
     position: relative;
+    margin-bottom: 32px;
   }
 
   &-thumb{
@@ -572,17 +574,32 @@ main{
       left: 0;
       width: 100%;
       height: 100%;
-      background: transparentize($post-thumb-overlay, 0.65);
+      background: transparentize($post-thumb-overlay, 0.75);
     }
   }
 
   &-image{
-    @include abs-centered(height);
+    @include abs-centered(width);
+  }
+
+  &-share{
+    @include abs-positioned(-1,32,32,-1);
+
+    a{
+      display: block;
+    }
+
+    svg{
+      display: block;
+      margin-bottom: 16px;
+      @include square(20px);
+      fill: $white;
+    }
   }
 
   &-caption{
-    @include abs-positioned(0,-1,-1,0);
-    width: 100%;
+    display: block;
+    @include abs-positioned(0,-1,64,0);
     padding: 32px;
   }
 
@@ -734,6 +751,52 @@ main{
       font-size: 16px;
     }
   }
+
+  &-content{
+    p{
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    blockquote{
+      padding: 32px;
+      text-align: center;
+      i{
+        color: $red;
+        font-size: 24px;
+        font-style: italic;
+      }
+      span{
+        position: relative;
+        display: inline-block;
+        padding-top: 16px;
+        color: $grey;
+        font-size: 12px;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+
+        &::before{
+          @include pseudos();
+          @include square(4px);
+          @include border-radius(50%);
+          @include translateX(-50%);
+          top: 6px;
+          left: 50%;
+          background: $grey;
+        }
+      }
+    }
+  }
+
+  &-footer{
+    padding: 16px 0 0;
+    text-transform: uppercase;
+    a{
+      margin-left: 4px;
+      font-family: $pt-sans-bold;
+    }
+  }
 }
 
 .cat-two-post{
@@ -749,7 +812,7 @@ main{
   }
 
   &-caption{
-    padding: 16px 0;
+    padding: 16px 0 0;
   }
   &-title{
     height: 60px;
@@ -869,5 +932,78 @@ main{
     font-family:$pt-sans !important;
     margin-right:10px;
     bottom:1px;
+  }
+}
+
+// Bloggers sidebar
+.bloggers{
+
+  &-ul{
+    background: $light-grey;
+    padding: 16px;
+
+    @include box-shadow(0 3px 10px transparentize($bx-light, 0.85));
+
+  }
+
+  &-list{
+    border-bottom: 1px solid #eee;
+  }
+
+  &-list:last-child {
+    border-bottom:none;
+  }
+
+  &-author-thumb,
+  &-details,
+  &-img{
+    display: table-cell;
+    vertical-align:middle;
+    
+  }
+  &-img {
+    padding-right: 12px;
+  }
+
+  &-author-thumb{
+    @include border-radius(50%);
+    overflow: hidden;
+
+    img{
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+.blog-post{
+  &-thumb{
+    height:230px;
+  }
+  &-author {
+
+    a{
+      color:red;
+    }
+  }
+  &-desc{
+    height:60px;
+  }
+
+  .b-post-author::after{
+    top: 8px;
+  }
+
+}
+
+// Bloggers profile 
+.profile-cover{
+  margin-top:5px;
+}
+
+.profile {
+
+  &-info{
+    
   }
 }
