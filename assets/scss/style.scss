@@ -1,5 +1,10 @@
 @import "base";
 
+::selection {
+    background: #ef5350;
+    color: $white;
+}
+
 /* --------------------------------
 Header
 -------------------------------- */
@@ -97,7 +102,6 @@ main{
   }
 
   &-btn-wrapper{
-    display: none;
     text-align: center;
     padding: 0 0 48px;
   }
@@ -251,7 +255,7 @@ main{
   }
 
   &-details{
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     svg{
       @include abs-positioned();
       fill: $grey;
@@ -303,7 +307,16 @@ main{
   &-thumb{
     position: relative;
     overflow: hidden;
-    height: 160px;
+    height: 224px;
+
+    &::after{
+      @include pseudos();
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparentize($post-thumb-overlay, 0.65);
+    }
   }
 
   &-large{
@@ -317,7 +330,9 @@ main{
   }
 
   &-caption{
-    padding: 16px 0;
+    position: absolute;
+    bottom: 0;
+    padding: 16px;
     //background: $white;
     //@include box-shadow(0 3px 10px rgba(0, 0, 0, 0.15));
   }
@@ -326,6 +341,7 @@ main{
     font-family: $pt-sans-bold;
     font-size: 16px;
     line-height: 20px;
+    color: $white;
   }
 
   &-details{
@@ -342,7 +358,7 @@ main{
     display: inline-block;
     vertical-align: middle;
     margin-right: 8px;
-    color: $grey;
+    color: $white;
     font-size: 12px;
     line-height: 18px;
   }
@@ -362,6 +378,7 @@ main{
       @include abs-positioned(1,1);
       width: 16px;
       height: 16px;
+      fill: $white;
     }
   }
 
@@ -370,6 +387,7 @@ main{
       @include abs-positioned(3,3);
       width: 12px;
       height: 12px;
+      fill: $white;
     }
   }
 }
@@ -785,7 +803,7 @@ main{
   &-thumb{
     position: relative;
     overflow: hidden;
-    height: 260px;
+    height: 250px;
   }
 
   &-image{
@@ -845,5 +863,69 @@ main{
       width: 12px;
       height: 12px;
     }
+  }
+}
+
+.cat-sidebar {
+  
+  &-title{
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    font-family: $pt-sans-bold;
+  }
+  &-ul{
+    background: $light-grey;
+    padding: 16px;
+
+    @include box-shadow(0 3px 10px transparentize($bx-light, 0.85));
+
+  }
+
+  &-news{
+    margin-top: 10px;
+    border-bottom:1px solid #eee;
+  }
+
+  &-news:last-child{
+    border-bottom:none;
+  }
+
+  &-news:first-child{
+    margin-top: 0;
+  }
+
+  .cat-post-date{
+    text-transform:none;
+  }
+}
+
+// Filter on popular page
+.nav-filter{
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  font-size: 14px;
+
+  li a{
+    font-family:$pt-sans; 
+    padding: 6px;
+  } 
+
+  li:last-child a{
+    padding:0;
+  } 
+
+  .nav{
+    display: inline-block;
+    border-radius: 50em;
+    border: 1px solid #eff1f3;
+    padding:0 10px;
+  }
+
+  &-label{
+    font-family:$pt-sans !important;
+    margin-right:10px;
+    bottom:1px;
   }
 }
