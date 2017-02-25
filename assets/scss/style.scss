@@ -98,6 +98,12 @@ main{
       font-size: 14px;
 
       @include translateY(-50%);
+
+      &:hover,
+      &:active,
+      &:focus{
+        color: transparentize($red, 0.25);
+      }
     }
   }
 
@@ -126,6 +132,10 @@ main{
       color: $white;
       background: $red;
     }
+  }
+
+  &-sidebar{
+    position: relative;
   }
 }
 
@@ -282,7 +292,7 @@ main{
   }
 
   &-date{
-    text-transform: uppercase;
+    //text-transform: uppercase;
   }
 
   &-views {
@@ -371,7 +381,7 @@ main{
   }
 
   &-date{
-    text-transform: uppercase;
+    //text-transform: uppercase;
   }
 
   &-views {
@@ -440,9 +450,8 @@ main{
     display: inline-block;
     vertical-align: middle;
     color: $grey;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 18px;
-    text-transform: uppercase;
     margin-right: 8px;
   }
 
@@ -496,18 +505,27 @@ main{
   &-author-thumb{
     @include border-radius(50%);
     overflow: hidden;
-    margin-right: 8px;
+    margin-right: 16px;
 
     img{
-      width: 48px;
-      height: 48px;
+      width: 32px;
+      height: 32px;
     }
   }
 
   &-author,
   &-author-name{
+    color: $red;
     font-family: $pt-sans-bold;
     text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus{
+      color: transparentize($red, 0.25);
+    }
   }
 
   &-author-name{
@@ -543,12 +561,14 @@ main{
     }
     .b-post-author{
       padding: 0;
+      margin-bottom: 16px;
       &::after{
         display: none;
       }
     }
     .b-post-title{
       height: 60px;
+      margin-bottom: 0;
       font-size: 16px;
     }
   }
@@ -847,7 +867,7 @@ main{
   }
 
   &-date{
-    text-transform: uppercase;
+    //text-transform: uppercase;
   }
 
   &-views {
