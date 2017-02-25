@@ -234,7 +234,8 @@ main{
 .r-post,
 .cat-post,
 .bloggers,
-.blog-post{
+.blog-post,
+.blogger-post{
 
   &-thumb{
     position: relative;
@@ -997,13 +998,134 @@ main{
 }
 
 // Bloggers profile 
-.profile-cover{
-  margin-top:5px;
-}
 
 .profile {
 
   &-info{
-    
+
   }
+  &-avatar,
+  &-user{
+    display: table-cell;
+    vertical-align:middle;
+  }
+
+  &-avatar{
+   
+
+    img {
+      width:130px;
+      height:130px;
+      border-radius:50%;
+    }
+
+  }
+  &-user{
+    padding-left:20px;
+    width: 100%;
+
+
+    h3{
+      font-size:22px;
+      font-family: $pt-sans-bold;
+      line-height: 24px;
+      margin-bottom: 8px
+    }
+
+    &-links{
+
+
+      li{
+        display:inline-block;
+        vertical-align: middle;
+        a{
+          padding-right: 8px;
+        }
+      
+      }
+
+      li:first-child,
+      li:last-child{
+      }
+
+      &-fb svg,
+      &-tw svg,
+      &-in svg{
+        width: 14px;
+        height: 14px;
+      }
+
+      &-fb svg,
+      &-tw svg,
+      &-in svg {
+        fill:$grey;
+      }
+    }
+
+  }
+  &-bio {
+    font-size: 16px;
+    margin-bottom: 8px;
+
+  }
+}
+
+// Bloggers content
+.blog-content{
+
+  &-nav{
+    border-bottom:2px solid #eee;
+    margin-bottom:20px;
+
+    ul{
+      margin-bottom: -2px;
+    }
+
+    li{
+      float:left;
+      margin-right: 8px;
+
+      a{
+        display: block;        
+        padding: 8px 16px 8px 0;
+
+        &:hover{
+          color:$red;
+          border-bottom:2px solid $red;
+        }
+      } 
+      .active{
+        border-bottom:2px solid $red;
+        color:$red;
+      }     
+    }
+  }
+}
+
+.blogger-post{
+
+  padding: 20px 0;
+  border-bottom:1px solid rgba(238, 238, 238, 0.38);
+
+  &-thumb{
+    display: table-cell;
+    width: 280px;
+    height:160px;
+  }
+
+
+  &-caption{
+    display: table-cell;
+    padding: 0 20px;
+  }
+  &-title{
+    height:inherit;
+    margin-bottom:10px;
+  }
+}
+
+.twitter-timeline{
+  background:#f8f8f8;
+  @include box-shadow(0 3px 10px transparentize($bx-light, 0.85));
+  
 }

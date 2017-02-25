@@ -701,7 +701,8 @@ main {
 .r-post-thumb,
 .cat-post-thumb,
 .bloggers-thumb,
-.blog-post-thumb {
+.blog-post-thumb,
+.blogger-post-thumb {
   position: relative;
   overflow: hidden;
   height: 160px; }
@@ -709,7 +710,8 @@ main {
 .r-post-image,
 .cat-post-image,
 .bloggers-image,
-.blog-post-image {
+.blog-post-image,
+.blogger-post-image {
   width: 100%;
   height: auto;
   position: absolute;
@@ -724,13 +726,15 @@ main {
 .r-post-caption,
 .cat-post-caption,
 .bloggers-caption,
-.blog-post-caption {
+.blog-post-caption,
+.blogger-post-caption {
   padding: 16px 0; }
 .l-post-title,
 .r-post-title,
 .cat-post-title,
 .bloggers-title,
-.blog-post-title {
+.blog-post-title,
+.blogger-post-title {
   height: 60px;
   font-family: "PT Sans Bold", Arial, sans-serif;
   font-size: 16px;
@@ -739,13 +743,15 @@ main {
 .r-post-details,
 .cat-post-details,
 .bloggers-details,
-.blog-post-details {
+.blog-post-details,
+.blogger-post-details {
   margin-bottom: 12px; }
   .l-post-details svg,
   .r-post-details svg,
   .cat-post-details svg,
   .bloggers-details svg,
-  .blog-post-details svg {
+  .blog-post-details svg,
+  .blogger-post-details svg {
     position: absolute;
     fill: #959595; }
 .l-post-date, .l-post-views, .l-post-comments,
@@ -760,7 +766,10 @@ main {
 .bloggers-comments,
 .blog-post-date,
 .blog-post-views,
-.blog-post-comments {
+.blog-post-comments,
+.blogger-post-date,
+.blogger-post-views,
+.blogger-post-comments {
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
@@ -775,20 +784,24 @@ main {
 .bloggers-views,
 .bloggers-comments,
 .blog-post-views,
-.blog-post-comments {
+.blog-post-comments,
+.blogger-post-views,
+.blogger-post-comments {
   position: relative;
   padding-left: 20px; }
 .l-post-date,
 .r-post-date,
 .cat-post-date,
 .bloggers-date,
-.blog-post-date {
+.blog-post-date,
+.blogger-post-date {
   text-transform: uppercase; }
 .l-post-views svg,
 .r-post-views svg,
 .cat-post-views svg,
 .bloggers-views svg,
-.blog-post-views svg {
+.blog-post-views svg,
+.blogger-post-views svg {
   position: absolute;
   left: 1px;
   top: 1px;
@@ -798,7 +811,8 @@ main {
 .r-post-comments svg,
 .cat-post-comments svg,
 .bloggers-comments svg,
-.blog-post-comments svg {
+.blog-post-comments svg,
+.blogger-post-comments svg {
   position: absolute;
   left: 3px;
   top: 3px;
@@ -1326,7 +1340,71 @@ main {
 .blog-post .b-post-author::after {
   top: 8px; }
 
-.profile-cover {
-  margin-top: 5px; }
+.profile-avatar, .profile-user {
+  display: table-cell;
+  vertical-align: middle; }
+.profile-avatar img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%; }
+.profile-user {
+  padding-left: 20px;
+  width: 100%; }
+  .profile-user h3 {
+    font-size: 22px;
+    font-family: "PT Sans Bold", Arial, sans-serif;
+    line-height: 24px;
+    margin-bottom: 8px; }
+  .profile-user-links li {
+    display: inline-block;
+    vertical-align: middle; }
+    .profile-user-links li a {
+      padding-right: 8px; }
+  .profile-user-links-fb svg, .profile-user-links-tw svg, .profile-user-links-in svg {
+    width: 14px;
+    height: 14px; }
+  .profile-user-links-fb svg, .profile-user-links-tw svg, .profile-user-links-in svg {
+    fill: #959595; }
+.profile-bio {
+  font-size: 16px;
+  margin-bottom: 8px; }
+
+.blog-content-nav {
+  border-bottom: 2px solid #eee;
+  margin-bottom: 20px; }
+  .blog-content-nav ul {
+    margin-bottom: -2px; }
+  .blog-content-nav li {
+    float: left;
+    margin-right: 8px; }
+    .blog-content-nav li a {
+      display: block;
+      padding: 8px 16px 8px 0; }
+      .blog-content-nav li a:hover {
+        color: #d0072a;
+        border-bottom: 2px solid #d0072a; }
+    .blog-content-nav li .active {
+      border-bottom: 2px solid #d0072a;
+      color: #d0072a; }
+
+.blogger-post {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.38); }
+  .blogger-post-thumb {
+    display: table-cell;
+    width: 280px;
+    height: 160px; }
+  .blogger-post-caption {
+    display: table-cell;
+    padding: 0 20px; }
+  .blogger-post-title {
+    height: inherit;
+    margin-bottom: 10px; }
+
+.twitter-timeline {
+  background: #f8f8f8;
+  -webkit-box-shadow: 0 3px 10px rgba(99, 117, 138, 0.15);
+  -moz-box-shadow: 0 3px 10px rgba(99, 117, 138, 0.15);
+  box-shadow: 0 3px 10px rgba(99, 117, 138, 0.15); }
 
 /*# sourceMappingURL=style.css.map */
