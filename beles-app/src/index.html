@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BelesApp</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+        document.documentElement.className = 'js';
+    </script>
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <ul class="nav clearfix">
+            <li>
+                <a href="cat.html">Чыгармачылык</a>
+            </li>
+            <li>
+                <a href="#">Спорт</a>
+            </li>
+            <li>
+                <a href="#">Жашоо</a>
+            </li>
+        </ul>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo1.png" alt="Logo">
+            </a>
+        </div>
+        <ul class="nav clearfix">
+            <li>
+                <a href="#">Кеңештер</a>
+            </li>
+            <li>
+                <a href="#">Сулуулук</a>
+            </li>
+            <li>
+                <a href="#">Ден соолук</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<main class="smooth">
+    <app-root>Loading...</app-root>
+</main>
+
+<script src="assets/js/anime.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    var tiltSettings = [
+        {
+            movement: {
+                imgWrapper : {
+                    translation : {x: 10, y: 10, z: 30},
+                    rotation : {x: 0, y: -10, z: 0},
+                    reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                },
+                lines : {
+                    translation : {x: 10, y: 10, z: [0,70]},
+                    rotation : {x: 0, y: 0, z: -2},
+                    reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+                },
+                caption : {
+                    rotation : {x: 0, y: 0, z: 2},
+                    reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                },
+                overlay : {
+                    translation : {x: 10, y: -10, z: 0},
+                    rotation : {x: 0, y: 0, z: 2},
+                    reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+                },
+                shine : {
+                    translation : {x: 100, y: 100, z: 0},
+                    reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+                }
+            }
+        }
+    ];
+    function tilt() {
+        var idx = 0;
+        console.log(document.querySelectorAll('.f-post'));
+        [].slice.call(document.querySelectorAll('.f-post')).forEach(function(el, pos) {
+            idx = pos%3 === 0 ? idx+1 : idx;
+            new TiltFx(el, tiltSettings[idx-1]);
+        });
+    }
+    document.addEventListener("DOMContentLoaded", tilt);
+</script>
+
+</body>
+</html>
