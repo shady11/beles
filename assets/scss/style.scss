@@ -931,12 +931,15 @@ main{
 
   li{
     a{
-      color: #009688;
+      color: #585858;
       padding: 6px;
     }
 
     a:hover, a:active, a:focus {
       color: #d0072a;
+    }
+    .active{
+      color:$red;
     }
   } 
 
@@ -1079,6 +1082,14 @@ main{
       &-tw svg,
       &-in svg {
         fill:$grey;
+      }
+
+      &-fb svg,
+      &-tw svg,
+      &-in svg {
+        &:hover{
+          fill:$red;
+        }
       }
 
       .bloggers-details{
