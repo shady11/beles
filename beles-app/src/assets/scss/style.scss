@@ -1166,96 +1166,6 @@ main{
   
 }
 
-<<<<<<< HEAD
-.stat{
-  padding:16px;
-  background:#f8f8f8;
-  @include box-shadow(0 3px 10px transparentize($bx-light, 0.85));
-
-  li{
-    position:relative;
-    display:block;
-    font-family: $pt-sans-bold;
-    padding-bottom:15px;
-  }
-
-  li:last-child{
-    padding: 0;
-  }
-
-  &-begin,
-  &-end{
-
-  }
-  &-begin{
-    width:50%;
-    display: inline-block;
-  }
-  &-end{
-    float: right;
-    color:$green;
-
-  }
-}
-
-.user-info{
-  &-header{
-    display: block;
-    float: right;
-    width:120px;
-    text-transform: lowercase;
-    text-align: center;
-  }
-
-  &-details{
-    display: inline-block;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-
-    .profile-user{
-
-      h3{
-        font-size: 18px;
-      }
-    }
-
-    .profile-avatar img{
-      height:80px;
-      width:80px;
-    }
-    .profile-user-last-post {
-
-      span{
-        color:#999;
-      }
-
-      h4{
-        font-size: 16px;
-      }
-      a{
-        color: #666;
-        text-decoration: underline;
-
-        &:hover, &:active, &:focus{
-          color: $dark;
-        }
-      }
-
-    }
-    .profile-blog{
-      display:table-cell;
-      vertical-align:middle;
-
-      span{
-        display: block;
-        width:120px;
-        font-family: $pt-sans-bold;
-        text-align: center;
-      }
-    }    
-  }
-
-=======
 .footer{
   padding: 32px 0;
   background: $footer-bg;
@@ -1282,5 +1192,4 @@ main{
       margin-bottom: 8px;
     }
   }
->>>>>>> e1b94c9ca83e57d5c3d3ef840e316af4b3e8ceb5
 }
