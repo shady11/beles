@@ -1166,7 +1166,6 @@ main{
   
 }
 
-<<<<<<< HEAD
 .stat{
   padding:16px;
   background:#f8f8f8;
@@ -1198,64 +1197,58 @@ main{
   }
 }
 
-.user-info{
-  &-header{
+.user-info {
+  &-header {
     display: block;
     float: right;
-    width:120px;
+    width: 120px;
     text-transform: lowercase;
     text-align: center;
   }
 
-  &-details{
+  &-details {
     display: inline-block;
     padding: 10px 0;
-    border-bottom: 1px solid #eee;
 
-    .profile-user{
+    &:not(:last-child){
+      @include border(1px solid transparentize($grey, 0.75), bottom);
+    }
 
-      h3{
+    .profile-user {
+
+      h3 {
         font-size: 18px;
       }
     }
 
-    .profile-avatar img{
-      height:80px;
-      width:80px;
+    .profile-avatar img {
+      height: 80px;
+      width: 80px;
     }
     .profile-user-last-post {
 
-      span{
-        color:#999;
+      span {
+        color: $grey;
       }
-
-      h4{
+      a {
+        display: block;
         font-size: 16px;
-      }
-      a{
-        color: #666;
-        text-decoration: underline;
-
-        &:hover, &:active, &:focus{
-          color: $dark;
-        }
       }
 
     }
-    .profile-blog{
-      display:table-cell;
-      vertical-align:middle;
+    .profile-blog {
+      display: table-cell;
+      vertical-align: middle;
 
-      span{
+      span {
         display: block;
-        width:120px;
+        width: 120px;
         font-family: $pt-sans-bold;
         text-align: center;
       }
-    }    
+    }
   }
-
-=======
+}
 .footer{
   padding: 32px 0;
   background: $footer-bg;
@@ -1282,5 +1275,4 @@ main{
       margin-bottom: 8px;
     }
   }
->>>>>>> e1b94c9ca83e57d5c3d3ef840e316af4b3e8ceb5
 }
