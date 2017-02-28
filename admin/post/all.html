@@ -201,91 +201,81 @@
             <div class="content">
                <div class="container-fluid">
                   <div class="row">
-
-                     <div class="col-xs-12">
-                        <div class="card ">
-                           <div class="header"> 
-                              <legend>Жаңы макала</legend>
+                     <div class="col-md-12">
+                        <div class="card">
+                           <div class="header">
+                              <h4 class="title">Бардык макалалар</h4>
                            </div>
-                           <div class="content">
-                              <form method="get" action="" class="form-horizontal">
-                                 <fieldset>
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Аталышы</label>
-                                       <div class="col-sm-10">
-                                          <input type="text" class="form-control">
-                                       </div>
-                                    </div>
-                                 </fieldset>
-                                 <fieldset>
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Категория</label>
-                                       <div class="col-sm-10">
-                                          <!-- Doc on https://select2.github.io/options.html  -->
-                                          <select class="js-multiple" multiple="multiple" class="form-control" style="width: 100%">
-                                             <option value="1">Чыгармачылык</option>
-                                             <option value="2">Жашоо</option>
-                                             <option value="3">Дизайн</option>
-                                             <option value="4">Сулуулук</option>
-                                          </select>
-                                       </div>
-                                    </div>
-                                 </fieldset>
-                                 <fieldset>
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Дата</label>
-                                       <div class="col-sm-10">
-                                          <input type="text" class="form-control datepicker" placeholder="Дата">
-                                       </div>
-                                    </div>
-                                 </fieldset>
-                                 <fieldset>
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Булак</label>
-                                       <div class="col-sm-10">
-                                          <input type="text" class="form-control">
-                                       </div>
-                                    </div>
-                                 </fieldset>
-                                 <fieldset>
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Миниатюра</label>
-                                       <div class="col-sm-10">
-                                          <div class="fileinput fileinput-new" data-provides="fileinput">
-                                            <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
-                                            <div>
-                                              <span class="btn btn-default btn-file"><span class="fileinput-new">Сүрөт тандоо</span><span class="fileinput-exists">Алмаштыруу</span><input type="file" name="..."></span>
-                                              <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Өчүрүү</a>
-                                            </div>
+                           <div class="content table-responsive table-full-width">
+                              <table class="table table-bigboy">
+                                 <thead>
+                                    <tr>
+                                       <th class="text-left">Миниаютра</th>
+                                       <th>Аталышы</th>
+                                       <th class="text-right">Категория</th>
+                                       <th class="text-right">Дата</th>
+                                       <th class="text-right">Көрүү</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>
+                                          <div class="img-container">
+                                             <img src="../assets/img/blog-1.jpg" alt="...">
                                           </div>
-                                       </div>
-                                    </div>
-                                 </fieldset>
-                                 <fieldset>
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Контент</label>
-                                       <div class="col-sm-10">
-                                          <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
-                                       </div>
-                                    </div>
-                                 </fieldset>
-                                 <fieldset>
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Тэгдер</label>
-                                       <div class="col-sm-10">
-                                          <!-- Doc on https://select2.github.io/options.html  -->
-                                          <select class="js-multiple-tags" multiple="multiple" class="form-control" style="width: 100%">
-                                             <option value="1">нарын</option>
-                                             <option value="2">бишкек</option>
-                                             <option value="3">ош</option>
-                                             <option value="4">талас</option>
-                                          </select>
-                                       </div>
-                                    </div>
-                                 </fieldset>
-                              </form>
+                                       </td>
+                                       <td class="td-name">
+                                          В LibreOffice 5.3 появился ленточный интерфейс и возможность работы в облаке
+                                       </td>
+                                       <td class="td-number">Чыгармачылык</td>
+                                       <td class="td-number">30/08/2016</td>
+                                       <td class="td-number">
+                                          1,225
+                                       </td>
+                                       <td class="td-actions">
+                                          <button type="button" rel="tooltip" data-placement="left" title="" class="btn btn-info btn-simple btn-icon" data-original-title="Көрүү">
+                                          <i class="fa fa-image"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" data-placement="left" title="" class="btn btn-success btn-simple btn-icon" data-original-title="Оңдоо">
+                                          <i class="fa fa-edit"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" data-placement="left" title="" class="btn btn-danger btn-simple btn-icon " data-original-title="Өчүрүү">
+                                          <i class="fa fa-times"></i>
+                                          </button>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          <div class="img-container">
+                                             <img src="../assets/img/blog-1.jpg" alt="...">
+                                          </div>
+                                       </td>
+                                       <td class="td-name">
+                                          В LibreOffice 5.3 появился ленточный интерфейс и возможность работы в облаке
+                                       </td>
+                                       <td class="td-number">Чыгармачылык</td>
+                                       <td class="td-number">30/08/2016</td>
+                                       <td class="td-number">
+                                          1,225
+                                       </td>
+                                       <td class="td-actions">
+                                          <button type="button" rel="tooltip" data-placement="left" title="" class="btn btn-info btn-simple btn-icon" data-original-title="Көрүү">
+                                          <i class="fa fa-image"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" data-placement="left" title="" class="btn btn-success btn-simple btn-icon" data-original-title="Оңдоо">
+                                          <i class="fa fa-edit"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" data-placement="left" title="" class="btn btn-danger btn-simple btn-icon " data-original-title="Өчүрүү">
+                                          <i class="fa fa-times"></i>
+                                          </button>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
                            </div>
                         </div>
+                        <!--  end card  -->
                      </div>
                   </div>
                </div>
