@@ -28,6 +28,9 @@ Replace text with a background-image
 /* --------------------------------
 Hide elements
 -------------------------------- */
+.hidden{
+  display: none !important;
+}
 .hide-s{
     display: none;
     @include breakpoint(medium){

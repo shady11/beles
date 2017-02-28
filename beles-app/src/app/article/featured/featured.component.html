@@ -1,0 +1,25 @@
+<div class="section f-section">
+    <div class="container">
+        <h1 class="section-title">
+                  <span>
+                  Мыктылар
+                  </span>
+            <a class="section-title-link" href="#">бардыгы</a>
+        </h1>
+        <section class="section-content posts f-posts clearfix">
+            <a *ngFor="let article of articles" href="#" class="f-post grid-4">
+                <figure class="f-post-figure">
+                    <img class="f-post-image" src="assets/img/{{article.thumbnail}}" alt="img03" />
+                    <div class="f-post-deco f-post-deco-shine">
+                        <div></div>
+                    </div>
+                    <div class="f-post-deco f-post-deco-overlay"></div>
+                    <figcaption class="f-post-caption">
+                        <h3 class="f-post-title">{{article.name}}</h3>
+                    </figcaption>
+                    <div class="f-post-deco f-post-deco-lines"></div>
+                </figure>
+            </a>
+        </section>
+    </div>
+</div>
