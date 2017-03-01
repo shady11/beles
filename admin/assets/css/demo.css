@@ -478,3 +478,28 @@
   margin: 10px auto 0 auto;
   text-align: center;
 }
+
+#datatables .img-container{
+    width: 140px;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    border-radius: 6px;
+}
+
+#datatables .img-container img {
+    width: 100%;
+}
+
+#datatables .img-avatar{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    display: block;
+    border-radius: 50%;
+}
+
+#datatables .img-avatar img {
+    width: auto;
+    height: 60px;
+}
