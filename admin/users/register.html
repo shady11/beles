@@ -92,7 +92,7 @@
                         <p>Рубрикалар</p>
                      </a>
                   </li>
-                  <li>
+                  <li class="active">
                      <a data-toggle="collapse" href="#users">
                         <i class="pe-7s-users"></i>
                         <p>Колдонуучулар
@@ -106,7 +106,7 @@
                         </ul>
                      </div>
                   </li>
-                  <li class="active">
+                  <li>
                      <a data-toggle="collapse" href="#pages">
                         <i class="pe-7s-browser"></i>
                         <p>Барактар
@@ -193,31 +193,48 @@
             <div class="content">
                <div class="container-fluid">
                   <div class="row">
-                     <div class="col-xs-12">
-                        <div class="card ">
-                           <div class="header"> 
-                              <legend>Биз жөнүндө</legend>
-                           </div>
-                           <div class="content">
-                              <form method="get" action="" class="form-horizontal">
-                                 <fieldset>
+                     <div class="col-md-12">
+                        <div class="header-text">
+                           <h3>Жаңы колдонуучуну каттоо</h3>
+                           <hr>
+                        </div>
+                     </div>
+                     <div class="col-md-4 col-sm-12">
+                        <div class="row">
+                           <form>
+                              <div class="card card-plain">
+                                 <div class="content">
                                     <div class="form-group">
-                                       <label class="col-sm-2 control-label">Аталышы</label>
-                                       <div class="col-sm-10">
-                                          <input type="text" class="form-control">
-                                       </div>
+                                       <input type="text" placeholder="Фамилия" class="form-control">
                                     </div>
-                                 </fieldset>
-                                 <fieldset>
                                     <div class="form-group">
-                                       <label class="col-sm-2 control-label">Контент</label>
-                                       <div class="col-sm-10">
-                                          <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
-                                       </div>
+                                       <input type="text" placeholder="Аты" class="form-control">
                                     </div>
-                                 </fieldset>
-                              </form>
-                           </div>
+                                    <div class="form-group">
+                                       <input type="text" placeholder="Никнейм" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                       <label>Тип</label>
+                                       <select class="js-type" style="width: 100%">
+                                          <option value="1" selected="selected">Редактор</option>
+                                          <option value="2">Блоггер</option>
+                                       </select>     
+                                    </div>
+                                    <div class="form-group">
+                                       <input type="email" placeholder="Email дарек" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                       <input type="password" placeholder="Сыр сөз" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                       <input type="password" placeholder="Сыр сөздү тастыктоо" class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="footer text-center">
+                                    <button type="submit" class="btn btn-fill btn-neutral btn-wd">Акккаунтту түзүү</button>
+                                 </div>
+                              </div>
+                           </form>
                         </div>
                      </div>
                   </div>
@@ -243,6 +260,15 @@
 
       <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
       <script src="../assets/js/demo.js"></script>
+
+      <!-- Select2 -->
+      <script src="../assets/js/select2.full.min.js"></script>
+
+      <script type="text/javascript">
+
+         $(".js-type").select2();
+
+      </script>
 
    </body>
 </html>

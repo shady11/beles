@@ -58,7 +58,7 @@
 }
 .select2-dropdown {
     background-color: white;
-    border: 1px solid #aaa;
+    border: 1px solid #E3E3E3;
     border-radius: 4px;
     box-sizing: border-box;
     display: block;
@@ -140,7 +140,7 @@
 }
 .select2-container--default .select2-selection--single {
     background-color: #fff;
-    border: 1px solid #aaa;
+    border: 1px solid #E3E3E3;
     border-radius: 4px;
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {

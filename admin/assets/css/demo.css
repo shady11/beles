@@ -503,3 +503,28 @@
     width: auto;
     height: 60px;
 }
+
+.text-white{
+  color: #fff !important;
+}
+
+.card-user {
+  padding: 70px 0;
+}
+
+.card-user .description{
+  padding: 0 50px;
+}
+.card-user .user-post{
+  display: block;
+  text-align: center;
+}
+.card-user .user-post svg{
+    height: 14px;
+    width: auto;
+    padding-right: 5px;
+    fill: #009688;
+}
+.card-user .user-link{
+  margin-top: 10px;
+}
