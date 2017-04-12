@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 4,
+      "name": "Кеңештер",
+      "slug": "advice",
+      "parent": ""
+    },
+    {
+      "id": 5,
+      "name": "Сулуулук",
+      "slug": "beauty",
+      "parent": ""
+    },
+    {
+      "id": 6,
+      "name": "Ден соолук",
+      "slug": "health",
+      "parent": ""
+    }
+  ]
+}

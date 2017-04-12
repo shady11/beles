@@ -1,0 +1,37 @@
+<div class="section l-section">
+  <div class="container">
+    <h1 class="section-title">
+      <span>
+                  Акыркылар
+                  </span>
+      <a class="section-title-link" [routerLink]="['/latest']">бардыгы</a>
+    </h1>
+    <section class="section-content posts f-posts clearfix">
+      <div *ngFor="let article of articles" class="l-post grid-3">
+        <figure class="l-post-figure">
+          <div class="l-post-thumb">
+            <a [routerLink]="['../article',article.slug]">
+              <img class="l-post-image" src="assets/images/post/medium/{{article.thumbnail_medium}}" alt="{{article.name}}">
+            </a>
+          </div>
+          <figcaption class="l-post-caption">
+            <div class="l-post-details">
+              <span class="l-post-date">{{article.created_at | timeAgo }}</span>
+              <span class="l-post-views">
+                                <beles-view></beles-view>                                                                       
+                                {{article.views}}
+                            </span>
+              <span class="l-post-comments">
+                                 <beles-comment></beles-comment>
+                                 {{article.comments}}
+                              </span>
+            </div>
+            <h3 class="l-post-title">
+              <a [routerLink]="['../article',article.slug]">{{article.name}}</a>
+            </h3>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</div>

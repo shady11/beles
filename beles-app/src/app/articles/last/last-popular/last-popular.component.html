@@ -1,0 +1,37 @@
+<sticky class="grid-3 section-sidebar">
+  <div id="topPosts">
+
+    <h1 class="section-title cat-section-title">
+      <span>
+        Популярдуулар
+      </span>
+    </h1>
+    <section class="section-content posts cat-sidebar clearfix">
+      <ul class="cat-sidebar-ul">
+        <li class="cat-sidebar-news" *ngFor="let popular of populars">
+          <div *ngIf="popular">
+            <a [routerLink]="['../article',popular.slug]" class="cat-sidebar-title">
+              {{popular.name}}
+            </a>
+            <div class="cat-post-details">
+              <span class="cat-post-date">{{popular.created_at | timeAgo}}</span>
+              <span class="cat-post-views">
+                <beles-view></beles-view>
+                {{popular.viewed}}
+            </span>
+              <span class="cat-post-comments">
+                <beles-comment></beles-comment>
+                12
+            </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <div class="banner">
+    <a href="#">
+      <!--<img src="assets/img/8.jpg" alt="">-->
+    </a>
+  </div>
+</sticky>

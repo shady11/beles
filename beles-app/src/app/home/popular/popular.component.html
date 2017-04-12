@@ -1,0 +1,64 @@
+<div class="section p-section">
+    <div class="container">
+        <h1 class="section-title">
+            <span>
+                  Популярдуу
+                  </span>
+            <a class="section-title-link" href="/popular.html">бардыгы</a>
+        </h1>
+        <section class="section-content posts p-posts clearfix">
+            <div class="p-post p-post-large grid-5" *ngFor="let first of firstPopular">
+                <figure class="p-post-figure">
+                    <div class="p-post-thumb">
+                        <img class="p-post-image" src="assets/img/{{first.thumbnail}}" alt="Title">
+                    </div>
+                    <figcaption class="p-post-caption">
+                        <div class="p-post-details">
+                            <span class="p-post-date">{{ first.created_at | timeAgo }}</span>
+                            <span class="p-post-views">
+                                 <beles-view></beles-view>
+                                 {{first.views}}
+                              </span>
+                            <span class="p-post-comments">
+                                 <beles-comment></beles-comment>
+                                 {{first.comments}}
+                              </span>
+                        </div>
+                        <h3 class="p-post-title">
+                            <a href="#">{{first.name}}</a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="grid-7">
+                <div class="row">
+                    <div *ngFor="let article of articles" class="p-post grid-6">
+                        <figure class="p-post-figure">
+                            <div class="p-post-thumb">
+                                <a href="#">
+                                    <img class="p-post-image" src="assets/img/{{article.thumbnail}}" alt="Title">
+                                </a>
+                            </div>
+                            <figcaption class="p-post-caption">
+                                <div class="p-post-details">
+                                    <span class="p-post-date">{{article.created_at | timeAgo}}</span>
+                                    <span class="p-post-views">
+                                       <beles-view></beles-view>
+                                       {{article.views}}
+                                    </span>
+                                    <span class="p-post-comments">
+                                       <beles-comment></beles-comment>
+                                       {{article.comments}}
+                                    </span>
+                                </div>
+                                <h3 class="p-post-title">
+                                    <a href="#">{{article.name}}</a>
+                                </h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

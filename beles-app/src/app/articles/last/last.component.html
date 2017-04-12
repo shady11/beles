@@ -1,0 +1,51 @@
+<div class="section cat-section">
+  <div class="container">
+    <div class="grid-9">
+      <h1 class="section-title cat-section-title">
+        <span>
+          Баардык макалалар
+        </span>
+      </h1>
+      <section class="section-content posts cat-posts clearfix">
+        <div class="row">
+          <div class="cat-post grid-4" *ngFor="let article of articles">
+            <figure class="cat-post-figure">
+              <div class="cat-post-thumb">
+                <a [routerLink]="['../article',article.slug]">
+                  <img class="cat-post-image" src="assets/images/post/medium/{{article.thumbnail_medium}}" alt="Title">
+                </a>
+              </div>
+              <figcaption class="cat-post-caption">
+                <div class="cat-post-details">
+                  <span class="cat-post-date">{{article.created_at | timeAgo}}</span>
+                  <span class="cat-post-views">
+                    <beles-view></beles-view>
+                    {{article.viewed}}
+                  </span>
+                  <span class="cat-post-comments">
+                    <beles-comment></beles-comment>
+                    12
+                  </span>
+                </div>
+                <h3 class="cat-post-title">
+                  <a [routerLink]="['../article',article.slug]">
+                    {{article.name}}
+                  </a>
+                </h3>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="section-btn-wrapper">
+            <a class="section-btn">
+              Дагы жүктөө
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <beles-last-popular></beles-last-popular>
+
+  </div>
+</div>

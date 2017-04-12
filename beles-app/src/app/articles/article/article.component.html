@@ -1,0 +1,63 @@
+<div class="section" *ngIf="article">
+
+    <div class="container">
+
+        <div class="grid-9">
+            <section class="section-content clearfix">
+                <div class="post">
+                    <figure class="post-figure">
+                        <div class="post-thumb">
+                            <!--<div id="main-thumbnail" class="placeholder" data-large="assets/images/post/9.jpg">
+                                <img class="post-image img-small" src="assets/img/{{article.thumbnail_medium}" alt="">
+                                <div></div>
+                            </div>-->
+                            <img defaultImage="assets/images/post/small/{{smallImage}}" lazyLoad="assets/images/post/large/{{largeImage}}" [offset]="offset">
+                        </div>
+                        <div class="post-share">
+                            <a href="#">
+                                <beles-twitter></beles-twitter>
+                            </a>
+                            <a href="#">
+                                <beles-facebook></beles-facebook>
+                            </a>
+                        </div>
+                        <figcaption class="post-caption">
+                            <div class="post-details">
+                                <a class="post-category">
+                                        Категория А
+                                    </a>
+                                <span class="post-date">23 мүнөт мурун</span>
+                                <span class="post-views">
+                                    <beles-view></beles-view>
+                                    {{article.viewed}}
+                                </span>
+                                <span class="post-comments">
+                                    <beles-comment></beles-comment>
+                                    12
+                                </span>
+                            </div>
+                            <h3 class="post-title">
+                                {{article.name}}
+                            </h3>
+                        </figcaption>
+                    </figure>
+
+                    <div class="post-content">
+                        <p>
+                            {{article.content}}
+                        </p>
+                    </div>
+
+                    <div class="post-footer">
+                        <p class="post-reference">
+                            булак: <a href="#">Beles Media</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <beles-related></beles-related>
+        </div>
+
+        <beles-cat-popular></beles-cat-popular>
+    </div>
+</div>

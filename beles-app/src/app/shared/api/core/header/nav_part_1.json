@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Чыгармачылык",
+      "slug": "creativity",
+      "parent": ""
+    },
+    {
+      "id": 2,
+      "name": "Спорт",
+      "slug": "sport",
+      "parent": ""
+    },
+    {
+      "id": 3,
+      "name": "Жашоо",
+      "slug": "life",
+      "parent": ""
+    }
+  ]
+}

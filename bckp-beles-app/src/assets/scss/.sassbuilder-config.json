@@ -1,0 +1,11 @@
+{
+    "project_path": "/",
+	"output_path": "../css",
+	"options": {
+		"cache":         false,
+		"debug":         true,
+		"line-comments": true,
+		"line-numbers":  true,
+		"style":         "nested"
+	}
+}

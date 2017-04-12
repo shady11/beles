@@ -1,0 +1,35 @@
+@import "fonts";
+
+//Colors
+$white: #ffffff;
+$dark: #333333;
+$red: #d0072a;
+$light-red: #F44336;
+$blue: #2498f6;
+$green: #28ae61;
+$grey: #959595;
+$light-grey: #f8f8f8;
+
+$footer-bg: #262b38;
+$post-thumb-overlay: #252b33;
+
+//Box-Shadow color
+$bx-light: #63758a;
+
+//Typography
+$pt-sans: 'PT Sans', Arial, sans-serif;
+$pt-sans-bold: 'PT Sans Bold', Arial, sans-serif;
+
+$museo-700: 'Museo 700', Arial, sans-serif;
+$museo-900: 'Museo 900', Arial, sans-serif;
+
+$line-height-base: 1.4285; // 20/14
+
+//Grid
+$grid-columns: 12;
+$grid-gutter-width: 24px;
+
+$xlarge-width: 1170px;
+$large-width: 992px;
+$medium-width: 720px;
+$small-width: 480px;

@@ -1,0 +1,19 @@
+<header>
+    <div class="container">
+        <ul class="nav clearfix">
+            <li *ngFor="let navItem of navItems1">
+                <a href="cat.html">{{navItem.name}}</a>
+            </li>
+        </ul>
+        <div class="logo">
+            <a [routerLink]="['/']">
+                <img src="assets/images/logo1.png" alt="Logo">
+            </a>
+        </div>
+        <ul class="nav clearfix">
+            <li *ngFor="let navItem of navItems2">
+                <a href="cat.html">{{navItem.name}}</a>
+            </li>
+        </ul>
+    </div>
+</header>

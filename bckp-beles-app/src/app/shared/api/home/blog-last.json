@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Необычные подарки на 23 Февраля и 8 Марта: механические конструкторы из дерева",
+      "content": "Шайлообек Дуйшеев",
+      "thumbnail": "21.jpg",
+      "author": "Шайлообек Дуйшеев",
+      "category": [1,2],
+      "created_at": "2017-02-18",
+      "views": 24,
+      "comments": 8,
+      "sourceName": "Sputnik Kyrgyzstan",
+      "sourceLink": "http://sputnik.kg"
+    },
+    {
+      "id": 2,
+      "name": "«Жуём мы как собаки»: советы по уходу за зубами для каждого уважающего себя человека",
+      "content": "",
+      "thumbnail": "22.jpg",
+      "author": "Бектур Искендер",
+      "category": [1],
+      "created_at": "2017-03-01 20:00",
+      "views": 88,
+      "comments": 2,
+      "sourceName": "Zanoza",
+      "sourceLink": "http://zanoza.kg"
+    },
+    {
+      "id": 3,
+      "name": "Рабочие места: Константин Бочарский, основатель и руководитель Pressfeed.ru",
+      "content": "",
+      "thumbnail": "23.jpg",
+      "author": "Жанар Акаев",
+      "category": [4],
+      "created_at": "2017-02-26",
+      "views": 24,
+      "comments": 8,
+      "sourceName": "Sputnik Kyrgyzstan",
+      "sourceLink": "http://sputnik.kg"
+    },
+    {
+      "id": 4,
+      "name": "Как оформить визу для поездки в Австралию",
+      "content": "",
+      "thumbnail": "24.jpg",
+      "author": "Аида Касымалиева",
+      "category": [3,4],
+      "created_at": "2017-02-23",
+      "views": 24,
+      "comments": 8,
+      "sourceName": "Sputnik Kyrgyzstan",
+      "sourceLink": "http://sputnik.kg"
+    }
+  ]
+}

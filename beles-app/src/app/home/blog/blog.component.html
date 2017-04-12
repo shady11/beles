@@ -1,0 +1,70 @@
+<div class="section b-section">
+  <div class="container">
+    <h1 class="section-title">
+      <span>
+        Блогдор
+      </span>
+      <a class="section-title-link" [routerLink]="['/blog']">бардыгы</a>
+    </h1>
+    <section class="section-content posts p-posts clearfix">
+      <div class="b-post b-post-with-thumb grid-4" *ngFor="let blogArticle of twoBlogArticle">
+        <figure class="b-post-figure">
+          <div class="b-post-thumb">
+            <img class="b-post-image" src="assets/img/{{blogArticle.thumbnail}}" alt="Title">
+          </div>
+          <figcaption class="b-post-caption">
+            <div class="b-post-details">
+              <span class="b-post-date">{{blogArticle.created_at | timeAgo }}</span>
+              <span class="b-post-views">
+                <beles-view></beles-view>
+                {{blogArticle.views}}
+              </span>
+              <span class="b-post-comments">
+                <beles-comment></beles-comment>
+                {{blogArticle.comments}}
+              </span>
+            </div>
+            <a class="b-post-author">
+              <div class="b-post-author-thumb">
+                <img src="assets/img/author.jpg" alt="">
+              </div>
+              <div class="b-post-author-name">
+                {{blogArticle.author}}
+              </div>
+            </a>
+            <h3 class="b-post-title">
+              <a href="#">
+                {{blogArticle.name}}
+              </a>
+            </h3>
+          </figcaption>
+        </figure>
+      </div>
+      <aside class="grid grid-4">
+        <div class="b-post" *ngFor="let article of articles">
+          <figure class="b-post-figure">
+            <figcaption class="b-post-caption">
+              <div class="b-post-details">
+                <a class="b-post-author" href="#">{{article.author}}</a>
+                <span class="b-post-date">{{article.created_at | timeAgo}}</span>
+                <span class="b-post-views">
+                  <beles-view></beles-view>
+                  {{article.views}}
+                </span>
+                <span class="b-post-comments">
+                  <beles-comment></beles-comment>
+                  {{article.comments}}
+                </span>
+              </div>
+              <h3 class="b-post-title">
+                <a href="#">
+                  {{article.name}}
+                </a>
+              </h3>
+            </figcaption>
+          </figure>
+        </div>
+      </aside>
+    </section>
+  </div>
+</div>
